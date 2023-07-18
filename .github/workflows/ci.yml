@@ -1,16 +1,16 @@
 name: CI
 on:
   pull_request:
-    branches: [develop, master22]
+    branches: [develop, master]
   push:
-    branches: [develop, master22]
+    branches: [develop, master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
-      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+    #env:
+    #  SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+    #  SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Cache node_modules
