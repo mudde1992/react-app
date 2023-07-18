@@ -25,9 +25,9 @@ jobs:
         with:
           node-version: "12.x"
       - run: npm ci 
-      
-      - run: npm run format:check
       - run: npm prettier --write
+      - run: npm run format:check
+      
       - run: npm test -- --coverage
         env:
           CI: true
